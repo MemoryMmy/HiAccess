@@ -105,7 +105,7 @@ We compare HiAccess with four representative accessibility analysis methods, nam
 | Software         | ArcGIS 10.2, PostgreSQL 9.5, PostGIS 2.2, pgRouting 2.3.2, UrbanAccess 0.1.0, AccessMod_shiny 1.1.1 |
 | Operating System | Windows10, X86_64 for ArcGIS-based method.Ubuntu 16.04, X86_64 for PostGIS-based method, UrbanAccess and AccessMod5. |
 
-![fig1](.\figures\fig1.JPG)
+![fig1](./figures/fig1.JPG)
 
 *Fig1. Accessibility analysis results ( 100m × 100m grids) of hospitals in Huayuan county using different methods*
 
@@ -113,7 +113,7 @@ We compare HiAccess with four representative accessibility analysis methods, nam
 
 
 
-![fig2](.\figures\fig2.JPG)
+![fig2](./figures/fig2.JPG)
 
 *Fig2. Computation time of the methods*
 
@@ -140,13 +140,13 @@ HiAccess can be used to solve high-resolution accessibility problems on large da
 | Memory           | 512 GB                                    |
 | Operating System | CentOS 6.5                                |
 
-![fig3](.\figures\fig3.JPG)
+![fig3](./figures/fig3.JPG)
 
 *Fig3. Accessibility analysis results (100m × 100m grids) of medical facilities in Beijing*
 
 
 
-![fig4](.\figures\fig4.JPG)
+![fig4](./figures/fig4.JPG)
 
 *Fig4. Parallel performance of HiAccess*
 
