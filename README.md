@@ -55,7 +55,7 @@ Two test datasets are provided in the **data** folder:
 
 Parameters:
 
-- `--road` Road_file: Road flies are in [Shapefile Format](https://en.wikipedia.org/wiki/Shapefile). Multiple input road layers are supported. For multiple road files, use comma as separation (e.g. `--road road1.shp,road2.shp.road3.shp` ). The road files should be in [Projection coordinate system](https://en.wikipedia.org/wiki/Geographic_coordinate_system) with meter as measurement unit.
+- `--road` Road_file: Road files are in [Shapefile Format](https://en.wikipedia.org/wiki/Shapefile). Multiple input road layers are supported. For multiple road files, use comma as separation (e.g. `--road road1.shp,road2.shp.road3.shp` ). The road files should be in [Projection coordinate system](https://en.wikipedia.org/wiki/Geographic_coordinate_system) with meter as measurement unit.
 - `--facility` Facility_file: Facility file is in [Shapefile Format](https://en.wikipedia.org/wiki/Shapefile). The facilities can be  jobs, health care, educational resources and so on. The facility file should be in [Projection coordinate system](https://en.wikipedia.org/wiki/Geographic_coordinate_system) with meter as measurement unit.
 - `--resolution` R(meters): The resolution of accessibility analysis. It is the size of the grid.
 - `--tolarence` T(meters): Snapping tolerance of disconnected edges.
