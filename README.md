@@ -113,7 +113,7 @@ We compare HiAccess with four representative accessibility analysis methods, nam
 
 
 
-![fig2](.\figures\fig2.JPG)
+![fig2](./figures/fig2.JPG)
 
 *Fig2. Computation time of the methods*
 
@@ -140,13 +140,13 @@ HiAccess can be used to solve high-resolution accessibility problems on large da
 | Memory           | 512 GB                                    |
 | Operating System | CentOS 6.5                                |
 
-![fig3](.\figures\fig3.JPG)
+![fig3](./figures/fig3.JPG)
 
 *Fig3. Accessibility analysis results (100m × 100m grids) of medical facilities in Beijing*
 
 
 
-![fig4](.\figures\fig4.JPG)
+![fig4](./figures/fig4.JPG)
 
 *Fig4. Parallel performance of HiAccess*
 
