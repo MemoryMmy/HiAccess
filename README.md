@@ -46,37 +46,35 @@ Two test datasets are provided in the **data** folder:
 
 ***Tab2. dataset2***
 
-| Name      | Type           | Size            |
-| --------- | -------------- | --------------- |
-| Road      | Road layer     | 265610 segments |
-| Education | Facility layer | 59 points       |
+| Name     | Type           | Size            |
+| -------- | -------------- | --------------- |
+| Road     | Road layer     | 265610 segments |
+| Hospital | Facility layer | 59 points       |
 
 ### Run:
 
 Parameters:
 
-- `--road` Road_file(s): Road layers in [Shapefile Format](https://en.wikipedia.org/wiki/Shapefile)
-- `--facility` Facility_file: Detail at max zoom level (default 12, for tile resolution of 2^12=4096)
-- `--resolution` R: Detail at max zoom level (default 12, for tile resolution of 2^12=4096)
-- `--tolarence` T: Detail at max zoom level (default 12, for tile resolution of 2^12=4096)
-- `--maxBound` B: Detail at max zoom level (default 12, for tile resolution of 2^12=4096)
-- `--rate` Rate: Detail at max zoom level (default 12, for tile resolution of 2^12=4096)
-- `--output` out_tiff: Detail at max zoom level (default 12, for tile resolution of 2^12=4096)
-- `-D` _detail_ or `--low-detail=`_detail_: Detail at lower zoom levels (default 12, for tile resolution of 2^12=4096)
-- `-m` _detail_ or `--minimum-detail=`_detail_: Minimum detail that it will try if tiles are too big at regular detail (default 7)
+- `--road` Road_file: Road layers in [Shapefile Format](https://en.wikipedia.org/wiki/Shapefile). Multiple input road layers are supported. For multiple road files, use comma as separation (e.g. `--road road1.shp,road2.shp.road3.shp` ). The road files should be in [Projection coordinate system](https://en.wikipedia.org/wiki/Geographic_coordinate_system) with meter as measurement unit.
+- `--facility` Facility_file: Facility layer in [Shapefile Format](https://en.wikipedia.org/wiki/Shapefile). The facilities can be  jobs, health care, educational resources and so on. The facility file should be in [Projection coordinate system](https://en.wikipedia.org/wiki/Geographic_coordinate_system) with meter as measurement unit.
+- `--resolution` R(meters): The resolution of accessibility analysis. It is the size of the grid.
+- `--tolarence` T(meters): Snapping tolerance of disconnected edges.
+- `--maxBound` B(meters): Off-road travel is taken into account, and maxBound is the maximum distance for off-road places to the nearest road segments.
+- `--rate` Rate: The ratio of off-road and road travel cost.
+- `--output` out_tiff: Output file in [GeoTIFF Format](https://en.wikipedia.org/wiki/GeoTIFF).
 
 Examples:
 
 > ```shell
-> $ mpirun -np 2 ./facilityAccess  --road ../data/Beijing_OSM/road.shp --facility ../data/Beijing_OSM/medicalfacilities.shp --resolution 100 --tolarence 10 --maxBound 3000 --rate 2 --output ./Beijing100meterCDM.tif
+> $ mpirun -np 4 ./CDM/facilityAccess  --road ./data/dataset1/roads.shp --facility ./data/dataset1/education.shp --resolution 100 --tolarence 10 --maxBound 3000 --rate 2 --output ./results/dataset1_100m_CDM.tif
 > ```
 >
 > ```shell
-> $ mpirun -np 2 ./facilityAccess  --road ../data/Beijing_OSM/road.shp --facility ../data/Beijing_OSM/medicalfacilities.shp --resolution 100 --tolarence 10 --maxBound 3000 --rate 2 --output ./Beijing100meterCDM.tif
+> $ mpirun -np 4 ./CDMMG/facilityAccess  --road ./data/dataset1/roads.shp --facility ./data/dataset1/education.shp --resolution 100 --tolarence 10 --maxBound 3000 --rate 2 --output ./results/dataset1_100m_CDMMG.tif
 > ```
 >
 > ```shell
-> $ mpirun -np 2 ./facilityAccess  --road ../data/Beijing_OSM/road.shp --facility ../data/Beijing_OSM/medicalfacilities.shp --resolution 100 --tolarence 10 --maxBound 3000 --rate 2 --output ./Beijing100meterCDM.tif
+> $ mpirun -np 4 ./OBM/facilityAccesscount  --road ./data/dataset1/roads.shp --facility ./data/dataset1/education.shp --resolution 100 --tolarence 10 --maxBound 3000 --rate 2 --output ./results/dataset1_100m_OBM.tif
 > ```
 
 

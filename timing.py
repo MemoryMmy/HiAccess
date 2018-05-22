@@ -1,13 +1,13 @@
 # -*- coding: UTF-8
+# timing program
 import time
 import os
 
-cmd ="./facilityAccess  --road ./data/龙山路网/龙山路网.shp --facility ./data/龙山县卫生局二级单位/龙山卫生局二级单位.shp --resolution 1.3234 "
+cmd ="mpirun -np 4 ./CDM/facilityAccess  --road ./data/dataset1/roads.shp --facility ./data/dataset1/education.shp --resolution 100 --tolarence 10 --maxBound 3000 --rate 2 --output ./results/dataset1_100m_CDM.tif"
 N=10
 
 time1 = time.time()
 for i in range(N):
-	#print i
 	os.system(cmd)
 
 time2 = time.time()

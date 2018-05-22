@@ -4,7 +4,8 @@
 * e-mail: mamengyu10@nudt.edu.cn
 * description: Apply HiAccess to the opportunity-based measurement.
 * run: 
-* 	 $ mpirun -np 4 ./facilityAccesscount  --road ../data/Huayuan/Roads/CountyRoad.shp,../data/Huayuan/Roads/RuralRoad.shp,../data/Huayuan/Roads/NationalHighway.shp --facility ../data/Huayuan/Jobs/FactoryEnterprise.shp --resolution 0.001 --tolarence 0.0001 --maxBound 0.03 --rate 2 --output ./job.tif
+*    $ mpirun -np 4 ./OBM/facilityAccesscount  --road ./data/dataset1/roads.shp --facility ./data/dataset1/education.shp --resolution 100 --tolarence 10 --maxBound 3000 --rate 2 --output ./results/dataset1_100m_OBM.tif
+*    $ mpirun -np 4 ./OBM/facilityAccesscount  --road ./data/dataset2/roads.shp --facility ./data/dataset2/hospitals.shp --resolution 100 --tolarence 10 --maxBound 3000 --rate 2 --output ./results/dataset2_100m_OBM.tif
 */
 
 
@@ -253,13 +254,13 @@ const int* neighborcList,int ** adjacencyList1, int &graphvertexCount)
 
 void Usage()
 {
-    printf( "Usage:           [--road:       道路文件(shp)       ]\n"
-	    "                     [--facility:   设施文件(shp)       ]\n"
-	    "                     [--resolution: 分辨率              ]\n"
-	    "                     [--tolarence:  生成路网容差         ]\n"
-	    "                     [--maxBound:   最大搜索范围         ]\n"
-	    "                     [--rate:       无道路代价比         ]\n"
-	    "                     [--output:     输出文件(tif)       ]\n"	    	    
+    printf( "Usage:           [--road:       Road_file(Shapefile)     ]\n"
+	    "                     [--facility:   Facility_file(Shapefile) ]\n"
+	    "                     [--resolution: R(meters)                ]\n"
+	    "                     [--tolarence:  T(meters)                ]\n"
+	    "                     [--maxBound:   B(meters)                ]\n"
+	    "                     [--rate:       Rate                     ]\n"
+	    "                     [--output:     out_tiff(GeoTIFF)        ]\n"	    	    
 	    );
 }
 

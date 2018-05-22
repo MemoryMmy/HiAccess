@@ -4,7 +4,8 @@
 * e-mail: mamengyu10@nudt.edu.cn
 * description: Use map generalization techniques to reduce computation without sacrificing accuracy.
 * run: 
-* 	 $ mpirun -np 2 ./facilityAccess  --road ../data/Beijing_OSM/road.shp --facility ../data/Beijing_OSM/medicalfacilities.shp --resolution 100 --tolarence 10 --maxBound 3000 --rate 2 --output ./Beijing100meterCDMMG.tif
+* 	 $ mpirun -np 4 ./CDMMG/facilityAccess  --road ./data/dataset1/roads.shp --facility ./data/dataset1/education.shp --resolution 100 --tolarence 10 --maxBound 3000 --rate 2 --output ./results/dataset1_100m_CDMMG.tif
+*    $ mpirun -np 4 ./CDMMG/facilityAccess  --road ./data/dataset2/roads.shp --facility ./data/dataset2/hospitals.shp --resolution 100 --tolarence 10 --maxBound 3000 --rate 2 --output ./results/dataset2_100m_CDMMG.tif
 */
 
 
@@ -203,13 +204,13 @@ const int* neighborcList,int ** adjacencyList1, int &graphvertexCount)
 
 void Usage()
 {
-    printf( "Usage:           [--road:       road files(shp)       ]\n"
-	    "                     [--facility:   facility files(shp)       ]\n"
-	    "                     [--resolution: resolution         ]\n"
-	    "                     [--tolarence:  tolarence of road         ]\n"
-	    "                     [--maxBound:   最大搜索范围         ]\n"
-	    "                     [--rate:       无道路代价比         ]\n"
-	    "                     [--output:     输出文件(tif)       ]\n"	    	    
+    printf( "Usage:           [--road:       Road_file(Shapefile)     ]\n"
+	    "                     [--facility:   Facility_file(Shapefile) ]\n"
+	    "                     [--resolution: R(meters)                ]\n"
+	    "                     [--tolarence:  T(meters)                ]\n"
+	    "                     [--maxBound:   B(meters)                ]\n"
+	    "                     [--rate:       Rate                     ]\n"
+	    "                     [--output:     out_tiff(GeoTIFF)        ]\n"	    	    
 	    );
 }
 
