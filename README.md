@@ -81,7 +81,7 @@ Examples:
 
 ## Performance:
 
-We compare HiAccess with four representative accessibility analysis methods, namely, the GIS-based method (using Network Analyst extension in ArcGIS), the method based on spatial databases (using PostGIS with pgRouting), and two standalone accessibility analysis tools ([UrbanAccess](https://github.com/UDST/urbanaccess) and [AccessMod5](https://github.com/fxi/AccessMod_shiny)). We use the closest-distance model for accessibility measurement. The computation time and accessibility results of the methods are shown in Fig1. and Fig 2. HiAccess has the best performance with the best accessibility analysis result among the methods. 
+We compare HiAccess with four representative accessibility analysis methods, namely, the GIS-based method (using Network Analyst extension in ArcGIS), the method based on spatial databases (using PostGIS with pgRouting), and two standalone accessibility analysis tools ([UrbanAccess](https://github.com/UDST/urbanaccess) and [AccessMod5](https://github.com/fxi/AccessMod_shiny)). We choose the roads and hospitals data of Huayuan county as test dataset(seeTab2). In the contrastive experiments, we use the closest-distance model for accessibility measurement. The experimental environment is shown in Tab 3. The computation time and accessibility results of the methods are shown in Fig1. and Fig 2. HiAccess has the best performance with the best accessibility analysis result among the methods. 
 
 ***Tab2. Roads and hospitals of Huayuan County***
 
