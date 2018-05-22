@@ -105,7 +105,7 @@ We compare HiAccess with four representative accessibility analysis methods, nam
 | Software         | ArcGIS 10.2, PostgreSQL 9.5, PostGIS 2.2, pgRouting 2.3.2, UrbanAccess 0.1.0, AccessMod_shiny 1.1.1 |
 | Operating System | Windows10, X86_64 for ArcGIS-based method.Ubuntu 16.04, X86_64 for PostGIS-based method, UrbanAccess and AccessMod5. |
 
-![fig1](.\figures\fig1.JPG)
+![fig1](./figures/fig1.JPG)
 
 *Fig1. Accessibility analysis results ( 100m × 100m grids) of hospitals in Huayuan county using different methods*
 
