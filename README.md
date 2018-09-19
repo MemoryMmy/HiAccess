@@ -148,7 +148,9 @@ HiAccess can be used to solve high-resolution accessibility problems on large da
 
 *Fig4. Parallel performance of HiAccess*
 
+## Citation: 
 
+Ma M, Ye W, et al. A parallel processing model for accelerating high-resolution geo-spatial accessibility analysis[J]. IEEE ACCESS, 2018 DOI: 10.1109/ACCESS.2018.2870168
 
 ## Contact:
 
