@@ -150,7 +150,9 @@ HiAccess can be used to solve high-resolution accessibility problems on large da
 
 ## Citation: 
 
-Ma M, Ye W, et al. A parallel processing model for accelerating high-resolution geo-spatial accessibility analysis[J]. IEEE ACCESS, 2018 DOI: 10.1109/ACCESS.2018.2870168
+[1] Mengyu Ma, Ye Wu, et al. A parallel processing model for accelerating high-resolution geo-spatial accessibility analysis[J]. IEEE ACCESS, 2018 DOI: 10.1109/ACCESS.2018.2870168
+
+[2] Mengyu Ma, Wei Xiong, et al. HiAccess: High-resolution Accessibility Analysis with High Performance Geographic Information System. In 7th ACM SIGSPATIAL International Workshop on Analytics for Big Geospatial Data (BigSpatial 2018), November 6, 2018, Seattle, WA, USA. ACM, New York, NY, USA, 4 pages. DOI： 10.1145/3282834.3282838
 
 ## Contact:
 
